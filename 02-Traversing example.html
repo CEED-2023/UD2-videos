@@ -7,26 +7,26 @@
   <title>Document</title>
   <style>
     ol { counter-reset: item }
-    li { display: block }
+    li { display: block; margin-left: 20px }
     li:before { content: counters(item, ".") " "; counter-increment: item }
   </style>
 </head>
 <body>
 
-  <ol>
-    <li>li element
+  <ol id="españa"> España
+    <li id="madrid">Madrid
       <ol>
-        <li>sub li element</li>
-        <li>sub li element</li>
-        <li>sub li element</li>
+        <li>Chueca</li>
+        <li>La Latina</li>
+        <li>Malasaña</li>
       </ol>
     </li>
-    <li>li element</li>
-    <li>li element
+    <li id="zaragoza">Zaragoza</li>
+    <li id="valencia">Valencia
       <ol>
-        <li>sub li element</li>
-        <li>sub li element</li>
-        <li>sub li element</li>
+        <li>El Carmen</li>
+        <li>Benimaclet</li>
+        <li>Ruzafa</li>
       </ol>
     </li>
   </ol>
