@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de recorrido del DOM</title>
+  <style>
+    html { font-size: 3rem; font-family: "Arial" }
+    ol { counter-reset: item }
+    li { display: block; margin-left: 20px }
+    li:before { content: counters(item, ".") " "; counter-increment: item }
+    li { color: initial; }
+    .red { color: red; }
+  </style>
+</head>
+<body>
+
+  <ol id="españa"> España
+    <li id="madrid" class="red">Madrid
+      <ol>
+        <li>Chueca</li>
+        <li class="red">La Latina</li>
+        <li>Malasaña</li>
+      </ol>
+    </li>
+    <li id="zaragoza">Zaragoza</li>
+    <li id="valencia">Valencia
+      <ol>
+        <li class="red">El Carmen</li>
+        <li>Benimaclet</li>
+        <li>Ruzafa</li>
+      </ol>
+    </li>
+  </ol>
+
+<!-- https://codebeautify.org/code-highlighter -->
+  <pre>
+<code id="htmlViewer" style="color:rgb(110, 107, 94); font-weight:400;background-color:rgb(255, 255, 255);background:rgb(255, 255, 255);display:block;padding: .5em;">  <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">ol</span> <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(96, 172, 57); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;españa&quot;</span>&gt;</span> España
+    <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span> <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(96, 172, 57); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;madrid&quot;</span> <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">class</span>=<span style="color:rgb(96, 172, 57); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;red&quot;</span>&gt;</span>Madrid
+      <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">ol</span>&gt;</span>
+        <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>Chueca<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>
+        <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span> <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">class</span>=<span style="color:rgb(96, 172, 57); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;red&quot;</span>&gt;</span>La Latina<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>
+        <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>Malasaña<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>
+      <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">ol</span>&gt;</span>
+    <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>
+    <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span> <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(96, 172, 57); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;zaragoza&quot;</span>&gt;</span>Zaragoza<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>
+    <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span> <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(96, 172, 57); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;valencia&quot;</span>&gt;</span>Valencia
+      <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">ol</span>&gt;</span>
+        <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span> <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">class</span>=<span style="color:rgb(96, 172, 57); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;red&quot;</span>&gt;</span>El Carmen<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>
+        <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>Benimaclet<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>
+        <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>Ruzafa<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>
+      <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">ol</span>&gt;</span>
+    <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>
+  <span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(215, 55, 55); font-weight:400;background:rgba(0, 0, 0, 0);">ol</span>&gt;</span></code></pre>
+
+</body>
+</html>
