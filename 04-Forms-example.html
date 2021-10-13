@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 10px;;
+        }
+        #f1 { background-color: lightblue;}
+        #f2 { background-color: lime;}
+    </style>
+</head>
+<body>
+    <form id="f1" name="form1" action="https://echo-form-fields.herokuapp.com/" method="POST">
+        <label>
+            Field 1
+            <input name="field1" type="text" />
+        </label>
+        <label>
+            <input type="checkbox" name="checkbox1" value="checked"> 
+            Check me!
+        </label>
+        <label><input type="radio" name="radio1" value="A"> Option A</label>
+        <label><input type="radio" name="radio1" value="B"> Option B</label>
+        <label><input type="radio" name="radio1" value="C"> Option C</label>
+        <div>
+            <h2>Group</h2>
+            <label>Field 2.1 <input name="field2[1]" type="text" /></label>
+            <label>Field 2.2 <input name="field2[2]" type="text" /></label>
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <br><br>
+
+    <form id="f2" name="form2" action="https://echo-form-fields.herokuapp.com/" method="GET">
+        <label>Field from another form: <input type="text" name="anotherFormField"></label>
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
