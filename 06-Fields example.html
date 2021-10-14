@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example with fields</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 10px;;
+        }
+        #f1 { background-color: lightblue;}
+        #f2 { background-color: lime;}
+    </style>    
+</head>
+<body>
+    <form id="f1" name="form1" action="https://echo-form-fields.herokuapp.com/" method="POST">
+        <label>
+            Name:
+            <input name="firstName" id="firstName" type="text" />
+        </label>
+        <label>
+            <input type="checkbox" id="knowsHTML" name="knowsHTML" value="yes"> 
+            Knows HTML?
+        </label>
+        <label><input type="radio" name="tvShow" value="A">Star Trek</label>
+        <label><input type="radio" name="tvShow" value="B">Dr. Who</label>
+        <label><input type="radio" name="tvShow" value="C">The X-Files</label>
+        <div>
+            <h2>Group</h2>
+            <label>First surname: <input name="surname[1]" type="text" /></label>
+            <label>Second surname: <input name="surname[2]" type="text" /></label>
+        </div>
+        <br>
+        <label>
+            Favourite color:
+            <select id="color" name="color">
+                <option value="#FF0000">Red</option>
+                <option value="#00FF00">Green</option>
+                <option value="#0000FF">Blue</option>
+            </select>
+        </label>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
