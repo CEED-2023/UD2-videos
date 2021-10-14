@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Load process example</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    div { width: 200px; height: 200px;}
+    #red { background-color: red;}
+    #yellow { background-color: yellow;}
+    #green { background-color: greenyellow;}
+  </style>
+</head>
+<body>
+
+  <div id="red"></div>
+
+  <script>
+    alert('script number one')
+  </script>
+
+  <div id="yellow"></div>
+
+  <script async>
+    alert('script number two')
+  </script>
+
+  <div id="green"></div>
+
+  <script>
+    alert('script number three')
+  </script>
+
+</body>
+</html>
